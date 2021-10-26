@@ -59,6 +59,71 @@ class Numeros
 		return max($this->numeros);	
 	}
 	
+	/*
+		Conta quantas vezes um número apareceu na lista
+	*/	
+	public function contar( $numero ){
+		$tamanho = count($this->numeros);
+		$quantidade_encontrada = 0;
+		$i = 0;
+		while($i<=$tamanho-1)
+		{
+			if($this->numeros[$i] == $numero){
+				$quantidade_encontrada = $quantidade_encontrada + 1;
+			}
+
+			$i++;
+		}
+		return $quantidade_encontrada;	
+	}
+		
+	/* 
+		Retorna a soma dos numeros armazenados na lista
+	*/
+	public function soma(){
+		$tamanho = count($this->numeros);
+		$soma = 0;
+		$i = 0;
+		while($i<=$tamanho-1)
+		{
+			$soma = $soma + $this->numeros[$i];
+
+			$i++;
+		}
+		return $soma;		
+	}
+	
+	/*
+		Retorna o produto dos numeros armazenados na lista
+	
+	*/	
+	public function produto(){
+
+
+			$produto=1;
+	
+			for($i=0;$i<count($this->numeros);$i++)
+			{
+			
+				$produto=$this->numeros[$i]*$produto;
+			}
+	
+			return $produto;
+	}
+		
+	/* 
+		Retorna a quantidade de numeros armazenados
+	*/
+	public function quantidade(){
+		$tamanho = count($this->numeros);
+		return $tamanho;
+	}
+	
+}
+
+
+?>
+
 	
 	
 }
